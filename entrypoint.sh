@@ -12,11 +12,6 @@ if [[ -f "pom.xml" ]]; then
   exit 1
 fi
 
-if [[ -f "build.gradle" ]]; then
-  echo "Gradle project detected. You should use the SonarQube plugin for Gradle during build rather than using this GitHub Action."
-  exit 1
-fi
-
 if [[ -z "${SONARCLOUD_URL}" ]]; then
   SONARCLOUD_URL="https://sonarcloud.io"
 fi
